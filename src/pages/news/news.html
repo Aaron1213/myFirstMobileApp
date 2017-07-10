@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title>Audi News</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content style="background-color: yellow;">
+    <ion-refresher color="primary-gradient">
+        <ion-refresher-content pullingText="Refresh List" refreshingText="Loading ..."></ion-refresher-content>
+    </ion-refresher>
+    <ion-slides #mySlider style="width:100%;height:100px">
+        <ion-slide>
+            <div><img src="Images/A6.png"></div>
+        </ion-slide>
+        <ion-slide>
+            <div><img src="Images/A5.png"></div>
+        </ion-slide>
+        <ion-slide>
+            <div><img src="Images/A3.png"></div>
+        </ion-slide>
+    </ion-slides>
+
+     <ion-card *ngFor = "let car of carlists" style="background-color: yellow;">
+            <ion-label class="eachCarPostion">{{car.id}}</ion-label>
+            <img src="{{car.picturePath}}" (click)="knowAboutNewCar($event,car)" class="eachCarPostion"/>
+            <div class="card-title">São Paulo</div> 
+            <div class="card-subtitle">41 Listings</div>
+            <button ion-button full style="background-color: black;" (click)="knowAboutNewCar($event,car)">
+                <ion-icon name="search"></ion-icon>
+            </button>
+      </ion-card>
+</ion-content>
