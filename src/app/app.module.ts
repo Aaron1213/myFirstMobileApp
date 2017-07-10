@@ -7,7 +7,9 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { newsPage } from '../pages/news/news';
+import { cardetailPage } from '../pages/cardetail/cardetail';
+import {loginPage} from '../pages/login/login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -17,7 +19,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    newsPage,
+    cardetailPage,
+    loginPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    newsPage,
+    cardetailPage,
+    loginPage
   ],
   providers: [
     StatusBar,
@@ -38,3 +46,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ]
 })
 export class AppModule {}
+export enum carTypes{
+  A3,A6,A5
+}

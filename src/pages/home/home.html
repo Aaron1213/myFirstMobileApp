@@ -1,17 +1,29 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="dark">
+       <button ion-button menuToggle icon-only color="light">
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        <ion-title>Audi Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content style="background-color: black">  
+   <ion-slides #mySlider style="width:100%;height:250px">
+        <ion-slide>
+            <div><img src="Images/A8.png"></div>
+        </ion-slide>
+        <ion-slide>
+            <div><img src="Images/Q3.png" (click)="goToNewCarDetail()"/></div>
+        </ion-slide>
+        <ion-slide>
+            <div><img src="Images/News.png" (click)="goToNewCarDetail()"/></div>
+        </ion-slide>
+    </ion-slides>
+        
+  <div>
+  <!--<button class="button button-calm button-full" (click)="goToNewCarDetail()" style="height:20px">Find your new car</button>-->
+  </div>
 </ion-content>
+<ion-footer>
+    <img src="Images/AudiLogoHome.png" width="100px" class="logoPostion"/>
+</ion-footer>
